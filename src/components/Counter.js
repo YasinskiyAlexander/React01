@@ -3,8 +3,8 @@ import React from "react";
 export class Counter extends React.Component{
     static defaultProps = {
         value: 0,
-        min: 0,
-        max: 20
+        min: -5,
+        max: 15
     };
     constructor(props){
         super(props);
@@ -34,13 +34,13 @@ export class Counter extends React.Component{
     }
     render(){
         return(
-            <div className="counter">
-                <div className="count">{this.state.value}</div>
-                <div className="buttons">
-                <button onClick={this.Increment.bind(this)}>&#8743;</button>
-                <button onClick={this.Decrement.bind(this)}>&#8744;</button>
+                <div className="counter">
+                    <div className="count">{this.state.value}</div>
+                    <div className="buttons">
+                        <button onClick={this.Increment.bind(this)}>&#8743;</button>
+                        <button onClick={this.Decrement.bind(this)}>&#8744;</button>
+                    </div>
                 </div>
-            </div>
         );
     }
 }
